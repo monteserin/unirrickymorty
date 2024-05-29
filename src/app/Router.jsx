@@ -1,0 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "../pages/Home";
+import Page2 from "../pages/Page2";
+import Layout from "../components/Layout";
+
+const Router = () => (
+  <BrowserRouter>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/page2/:id" element={<Page2 />} />
+      </Routes>
+    </Layout>
+  </BrowserRouter>
+);
+
+export default Router;
